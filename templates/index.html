@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>
+        This is index page
+    </h1>
+    <form action="{{url_for('index')}}" method="post">
+        <input type="text" name="name" placeholder="Name">
+        <input type="number" name="age" placeholder="Age">
+        <input type="text" name="nationality" placeholder="Nationality">
+        <input type="text" name="birthplace" placeholder="Birthplace">
+        <button type="submit">Submit</button>
+    </form>
+
+    {% for person in persons%}
+        <p> {{person.name}} {{person.age}} {{person.nationality_id}} {{person.birthplace}}</p>
+    {% endfor %}
+    
+</body>
+</html>
