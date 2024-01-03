@@ -1,6 +1,8 @@
 from flask_sqlalchemy import SQLAlchemy
 from models import *
-from app import app
+from flask import Flask
+
+app = Flask(__name__)
 
 app.config['SQLALCHEMY_DATABASE_URI'] = "sqlite:///interview.db"
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
